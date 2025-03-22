@@ -18,7 +18,7 @@ export default function Home() {
             <CardDescription> Slot Machine game using React</CardDescription>
           </CardHeader>
           <CardContent className="flex-grow">
-            <p className="italic">Features: Slot Machine implementation, Rules page, Local storage support</p>
+            <p className="italic">Features: Slot Machine implementation, Local storage support</p>
           </CardContent>
           <CardFooter>
             <Link href="/assignments/slotmachine" className="w-full">
@@ -54,7 +54,7 @@ export default function Home() {
             <CardDescription>Greeting card creating using React</CardDescription>
           </CardHeader>
           <CardContent className="flex-grow">
-            <p className="italic">Features: Simple usage of props, Local storage support</p>
+            <p className="italic">Features: Simple usage of props</p>
           </CardContent>
           <CardFooter>
             <Link href="/assignments/greeting" className="w-full">
