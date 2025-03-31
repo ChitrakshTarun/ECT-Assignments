@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 
 export function useLocalStorage<T>(key: string, initialValue: T) {
-  const [storedValue, setStoredValue] = useState<T>(initialValue);
+  const [storedValue, setStoredValue] = useState<T | null>(null);
 
   useEffect(() => {
     try {
@@ -13,15 +13,13 @@ export function useLocalStorage<T>(key: string, initialValue: T) {
       console.log(error);
       setStoredValue(initialValue);
     }
-  }, [key, initialValue]);
+  }, [key]);
 
   const setValue = (value: T | ((val: T) => T)) => {
     try {
-      const valueToStore = value instanceof Function ? value(storedValue) : value;
+      const valueToStore = value instanceof Function ? value(storedValue!) : value;
       setStoredValue(valueToStore);
-      if (typeof window !== "undefined") {
-        window.localStorage.setItem(key, JSON.stringify(valueToStore));
-      }
+      window.localStorage.setItem(key, JSON.stringify(valueToStore));
     } catch (error) {
       console.log(error);
     }
