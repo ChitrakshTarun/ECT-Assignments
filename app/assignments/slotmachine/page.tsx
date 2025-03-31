@@ -15,12 +15,12 @@ export default function SlotMachine() {
   const [spinning, setSpinning] = useState<boolean>(false);
 
   const spin = () => {
-    if (coins < 10) {
+    if (coins! < 10) {
       setMessage("Not enough coins!");
       return;
     }
 
-    setCoins(coins - 10);
+    setCoins(coins! - 10);
     setMessage("Spinning...");
     setSpinning(true);
 
@@ -99,7 +99,7 @@ export default function SlotMachine() {
           </div>
         </CardContent>
         <CardFooter className="flex flex-col gap-2">
-          <Button onClick={spin} disabled={spinning || coins < 10} className="w-full" size="lg">
+          <Button onClick={spin} disabled={spinning || coins! < 10} className="w-full" size="lg">
             {spinning ? "Spinning..." : "Spin (10 coins)"}
           </Button>
           <Button onClick={resetCoins} variant="outline" className="w-full">

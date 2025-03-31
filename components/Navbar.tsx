@@ -17,11 +17,11 @@ export function Navbar() {
           <ArrowLeft className="w-6 h-6" />
         </button>
       )}
-      <div className="container mx-auto flex h-16 items-center justify-center md:justify-between">
-        <Link href="/" className="font-bold text-xl md:ml-12">
+      <div className="container mx-auto flex h-16 items-center justify-between">
+        <Link href="/" className="font-bold text-xl ml-12">
           ECT Assignments
         </Link>
-        <div className="hidden md:block">
+        <div className="block">
           <ThemeToggleButton />
         </div>
       </div>

@@ -18,11 +18,11 @@ export default function Counter() {
           <div className="text-7xl font-bold mb-8">{count}</div>
 
           <div className="flex gap-4">
-            <Button onClick={() => setCount(count - 1)} variant="outline" size="icon" className="h-12 w-12">
+            <Button onClick={() => setCount(count! - 1)} variant="outline" size="icon" className="h-12 w-12">
               <Minus className="h-6 w-6" />
             </Button>
 
-            <Button onClick={() => setCount(count + 1)} variant="outline" size="icon" className="h-12 w-12">
+            <Button onClick={() => setCount(count! + 1)} variant="outline" size="icon" className="h-12 w-12">
               <Plus className="h-6 w-6" />
             </Button>
           </div>
