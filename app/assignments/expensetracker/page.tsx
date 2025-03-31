@@ -74,7 +74,7 @@ export default function ExpenseTracker() {
                 <Input
                   id="amount"
                   type="number"
-                  step="0.01"
+                  step="10"
                   placeholder="0.00"
                   value={amount}
                   onChange={(e) => setAmount(e.target.value)}
